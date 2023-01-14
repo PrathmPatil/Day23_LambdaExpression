@@ -34,11 +34,29 @@ public class Main {
 			fi.info(lirstName);
 			
 	}
+	void gmail()
+	{
+		
+			FunctionalInterface fi=(gmail) -> {
+				boolean uGmail=Pattern.matches("^abc.[a-zA-Z0-9]+@bl.co.[a-zA-Z0-9]+$", gmail);
+				if(uGmail==true)
+				System.out.println("Enterd gmail " +gmail+" are valid.");
+				else
+				System.out.println("Enterd gmail " +gmail+" are not valid.");
+			};
+			Scanner sc=new Scanner(System.in);
+			System.out.println("Enter User Gamil");
+			String gmail=sc.nextLine();
+			fi.info(gmail);
+			
+	}
 
 	public static void main(String[] args) {
 		Main main=new Main();
 //		main.firstName();
-        main.lastName();
+//      main.lastName();
+		main.gmail();
+		
 
 		}
 	  
