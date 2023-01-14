@@ -18,12 +18,27 @@ public class Main {
 			fi.info(firstName);
 			}
 	}
-	
+	void lastName()
+	{
+		
+			FunctionalInterface fi=(lname) -> {
+				boolean lName=Pattern.matches("^[A-Z]{1}[a-z]{2}+$", lname);
+				if(lName==true)
+				System.out.println("Enterd Name " +lname+" are valid.");
+				else
+				System.out.println("Enterd Name " +lname+" are not valid.");
+			};
+			Scanner sc=new Scanner(System.in);
+			System.out.println("Enter Lirst Name");
+			String lirstName=sc.nextLine();
+			fi.info(lirstName);
+			
+	}
 
 	public static void main(String[] args) {
 		Main main=new Main();
-		main.firstName();
-
+//		main.firstName();
+        main.lastName();
 
 		}
 	  
