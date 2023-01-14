@@ -50,12 +50,30 @@ public class Main {
 			fi.info(gmail);
 			
 	}
+	void phoneNumber()
+	{
+		
+			FunctionalInterface fi=(phoneNumber) -> {
+				boolean uphoneNumber=Pattern.matches("^[+]?{1}[0-9]{2}[\\s]?{1}[7-9]{1}[0-9]{9}$", phoneNumber);
+				if(uphoneNumber==true)
+				System.out.println("Enterd phoneNumber " +phoneNumber+" are valid.");
+				else
+				System.out.println("Enterd phoneNumber " +phoneNumber+" are not valid.");
+			};
+			Scanner sc=new Scanner(System.in);
+			System.out.println("Enter User phone number: ");
+			String phoneNumber=sc.nextLine();
+			fi.info(phoneNumber);
+			
+	}
+	
 
 	public static void main(String[] args) {
 		Main main=new Main();
 //		main.firstName();
 //      main.lastName();
-		main.gmail();
+//		main.gmail();
+		main.phoneNumber();
 		
 
 		}
