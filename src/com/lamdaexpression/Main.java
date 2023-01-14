@@ -66,6 +66,22 @@ public class Main {
 			fi.info(phoneNumber);
 			
 	}
+	void passWord()
+	{
+		FunctionalInterface fi=(passward) -> {
+			boolean upassward=Pattern.matches("^[A-za-z0-99@#$%*]{8,}$", passward);
+			if(upassward==true)
+			System.out.println("Enterd passward " +passward+" are valid.");
+			else
+			System.out.println("Enterd passward " +passward+" are not valid.");
+		};
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter User passward: ");
+		String passward=sc.nextLine();
+		fi.info(passward);
+		
+		
+	}
 	
 
 	public static void main(String[] args) {
@@ -73,7 +89,8 @@ public class Main {
 //		main.firstName();
 //      main.lastName();
 //		main.gmail();
-		main.phoneNumber();
+//		main.phoneNumber();
+		main.passWord();
 		
 
 		}
