@@ -67,9 +67,9 @@ public class Main {
 			
 	}
 	void passWord()
-	{
+	{   //^(?=.*[A-Z])(?=.*\\d).*[a-z@#$%*+-_.]{8,}$
 		FunctionalInterface fi=(passward) -> {
-			boolean upassward=Pattern.matches("^[A-Z]{1}[A-za-z0-99@#$%*]{7,}$", passward);
+			boolean upassward=Pattern.matches("^(?=.*[A-Z])(?=.*\\d).*[A-za-z0-99@#$%*]{8,}$", passward);
 			if(upassward==true)
 			System.out.println("Enterd passward " +passward+" are valid.");
 			else
