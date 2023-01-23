@@ -1,5 +1,7 @@
 package com.lamdaexpression;
 import java.util.Scanner;
+import java.util.List;
+import java.util.ArrayList;
 import java.util.regex.Pattern;
 
 public class Main {
@@ -78,7 +80,30 @@ public class Main {
 		Scanner sc=new Scanner(System.in);
 		System.out.println("Enter User passward: ");
 		String passward=sc.nextLine();
-		fi.info(passward);
+		fi.info(passward);		
+	}
+	void gmailPattern() 
+	{//[a-zA-Z0-9]+([._-[+]][a-zA-Z0-9]+)*@([a-z1-9]+)([.][a-z]*)?(\\.[a-z]{2,}
+		FunctionalInterface fi=(gmailPattern) ->{
+			boolean passward=Pattern.matches("^[a-zA-Z0-9]+([._-[+]][a-zA-Z0-9]+)*@([a-z1-9]+)([.][a-z]*)?(\\.[a-z]{2,})",gmailPattern);
+			System.out.println(passward);
+			
+		};
+	
+		List<String>gmail=new ArrayList<>();
+		gmail.add("abc@yahoo.com");
+		gmail.add("abc-100@yahoo.com");
+		gmail.add("abc.100@yahoo.com");
+		gmail.add("abc111@abc.com");
+		gmail.add("abc-100@abc.net");
+		gmail.add("abc.100@abc.com.au");
+		gmail.add("abc@1.com");
+		gmail.add("abc@gmail.com.com");
+		gmail.add("abc+100@gmail.com");
+		for(String i:gmail)
+		{
+			fi.info(i);
+		}
 		
 		
 	}
@@ -90,7 +115,13 @@ public class Main {
 //      main.lastName();
 //		main.gmail();
 //		main.phoneNumber();
-		main.passWord();
+//		smain.passWord();
+		
+		
+		
+//		main.gmailPattern(gmail.toString());
+		main.gmailPattern();
+		
 		
 
 		}
